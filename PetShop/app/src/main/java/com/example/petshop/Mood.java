@@ -3,7 +3,11 @@ package com.example.petshop;
 import java.util.Date;
 
 public abstract class Mood {
-    Date date;
+    private Date date;
+
+    public Mood() {
+        this.date = new Date();
+    }
 
     public Mood(Date date) {
         this.date = date;
@@ -17,5 +21,5 @@ public abstract class Mood {
         this.date = date;
     }
 
-    public abstract String speak();
+    public abstract String moodRepresentation();
 }
